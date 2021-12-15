@@ -1,5 +1,6 @@
 ﻿using ForecastingApp.Models;
 using ForecastingApp.Services.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace ForecastingApp.Services
 {
   public class CountryService : ICountryService
   {
-    public List<Country> GetCountries()
+    public async Task<List<Country>> GetCountries()
     {
-      throw new NotImplementedException();
+      var data = await System.IO.File.ReadAllTextAsync("Data/countries.json");
+      return JsonConvert.DeserializeObject<List<Country>>(data);
     }
   }
 }

@@ -8,10 +8,10 @@ namespace ForecastingApp.Tests
   public class ServiceTest
   {
     [Fact]
-    public void Check_if_Country_Exist()
+    public async void Check_if_Country_Exist()
     {
       ICountryService countryService = new CountryService();
-      var countries = countryService.GetCountries();
+      var countries = await countryService.GetCountries();
       Assert.NotNull(countries);
     }
 

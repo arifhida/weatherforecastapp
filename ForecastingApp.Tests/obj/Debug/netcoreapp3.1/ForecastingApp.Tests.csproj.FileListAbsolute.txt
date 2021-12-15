@@ -1,4 +1,9 @@
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
+D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.csproj.AssemblyReference.cache
+D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.AssemblyInfoInputs.cache
+D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.AssemblyInfo.cs
+D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.csproj.CoreCompileInputs.cache
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\testhost.dll
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\ForecastingApp.Views.dll
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\ForecastingApp.Views.pdb
@@ -118,11 +123,6 @@ D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\ne
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\ForecastingApp.dll
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\bin\Debug\netcoreapp3.1\ForecastingApp.pdb
-D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.csproj.AssemblyReference.cache
-D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
-D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.AssemblyInfoInputs.cache
-D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.AssemblyInfo.cs
-D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.csproj.CoreCompileInputs.cache
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.csproj.CopyComplete
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.dll
 D:\Personal Playground\xtramile\ForecastingApp\ForecastingApp.Tests\obj\Debug\netcoreapp3.1\ForecastingApp.Tests.pdb

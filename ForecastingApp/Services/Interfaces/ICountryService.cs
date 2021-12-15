@@ -8,6 +8,6 @@ namespace ForecastingApp.Services.Interfaces
 {
   public interface ICountryService
   {
-    List<Country> GetCountries();
+    Task<List<Country>> GetCountries();
   }
 }
