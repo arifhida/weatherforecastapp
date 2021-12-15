@@ -2,25 +2,108 @@ import React, { Component } from 'react';
 
 export class Home extends Component {
   static displayName = Home.name;
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: [], cities: [], 
+      weather: {
+        coord: {
+          lon: 0,
+          lat: 0
+        },
+        dt: 0,
+        wind: {
+          speed: 0,
+          deg: 0
+        }
+      }
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleCityChange = this.handleCityChange.bind(this);
+  }
+  componentDidMount() {
+    this.fetchCountries();
+  }
+  async handleChange(e) {
+    var countrycode = e.target.value;
+    const response = await fetch('weatherforecast/cities/' + countrycode);
+    const data = await response.json();
+    this.setState({ cities: data });
+  }
+  async handleCityChange(e) {
+    var city = e.target.value;
+    const response = await fetch('weatherforecast/forecast/' + city);
+    const data = await response.json();
+    const time = new Date((data.dt) * 1000).toUTCString();
+    this.setState({ weather: data, time: time });
+  }
 
-  render () {
+  render() {
     return (
       <div>
-        <h1>Hello, world!</h1>
-        <p>Welcome to your new single-page application, built with:</p>
-        <ul>
-          <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-          <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-          <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-        </ul>
-        <p>To help you get started, we have also set up:</p>
-        <ul>
-          <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-          <li><strong>Development server integration</strong>. In development mode, the development server from <code>create-react-app</code> runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-          <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-        </ul>
-        <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
+        <h1>Weather Forecast</h1>
+        <p>Welcome to weather forecast demo application. Please select city to check the weather</p>
+        <div className="container">
+          <div className="form-group">
+            <label>Country</label>
+            <select className="form-control" id="optCountry" onChange={this.handleChange}>
+              <option value="">select country</option>
+              {
+                this.state.countries.map(country => (
+                  <option key={country.code} value={country.code}>{country.name}</option>
+                ))
+              }
+            </select>
+          </div>
+          <div className="form-group">
+            <label>Cities</label>
+            <select className="form-control" id="optCity" onChange={this.handleCityChange}>
+              <option value="">select city</option>
+              {
+                this.state.cities.map(city => (
+                  <option key={city.name} value={city.name}>{city.name}</option>
+                ))
+              }
+            </select>
+          </div>
+        </div>
+        <div className="container">
+          <h3>Location</h3>
+          <div className="form-group">
+            <label>City</label>
+            <label className="form-control">{this.state.weather.name }</label>
+          </div>
+          <div className="form-group">
+            <label>Lon/Lat</label>
+            <label className="form-control">{this.state.weather.coord.lon},{this.state.weather.coord.lat}</label>
+          </div>
+          <div className="form-group">
+            <label>Time</label>
+            <label className="form-control">{this.state.time}</label>
+          </div>
+          <h3>Wind</h3>
+          <div className="form-group">
+            <label>Speed</label>
+            <label className="form-control">{this.state.weather.wind.speed}</label>
+          </div>
+          <div className="form-group">
+            <label>Deg</label>
+            <label className="form-control">{this.state.weather.wind.deg}</label>
+          </div>
+          <h3>Visibility</h3>
+          <div className="form-group">
+            <label>Visibility</label>
+            <label className="form-control">{this.state.weather.visibility}</label>
+          </div>
+        </div>
       </div>
     );
   }
+
+  async fetchCountries() {
+    const response = await fetch('weatherforecast/countries');
+    const data = await response.json();
+    this.setState({ countries: data });
+  }
+
 }

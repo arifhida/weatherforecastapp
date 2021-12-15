@@ -1,3 +1,5 @@
+using ForecastingApp.Services;
+using ForecastingApp.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
@@ -19,8 +21,13 @@ namespace ForecastingApp
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-
+      services.AddSingleton<IConfiguration>(Configuration);
       services.AddControllersWithViews();
+      services.AddScoped<ICountryService, CountryService>();
+      services.AddScoped<ICityService, CityService>();
+      services.AddScoped<IHttpClientProvider, HttpClientProvider>();
+      services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+      
 
       // In production, the React files will be served from this directory
       services.AddSpaStaticFiles(configuration =>
