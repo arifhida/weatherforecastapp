@@ -1,0 +1,37 @@
+[
+  {
+    "ID": 1,
+    "CountryCode": "USA",
+    "Name": "New York"
+  },
+  {
+    "ID": 2,
+    "CountryCode": "USA",
+    "Name": "Washington"
+  },
+  {
+    "ID": 3,
+    "CountryCode": "USA",
+    "Name": "Phoenix"
+  },
+  {
+    "ID": 4,
+    "CountryCode": "UK",
+    "Name": "London"
+  },
+  {
+    "ID": 5,
+    "CountryCode": "UK",
+    "Name": "Manchester"
+  },
+  {
+    "ID": 6,
+    "CountryCode": "AU",
+    "Name": "Sydney"
+  },
+  {
+    "ID": 7,
+    "CountryCode": "AU",
+    "Name": "Brisbane"
+  }
+]

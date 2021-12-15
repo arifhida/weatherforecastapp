@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ForecastingApp\ForecastingApp.csproj" />
+  </ItemGroup>
+
 </Project>
