@@ -11,21 +11,7 @@ namespace ForecastingApp.Models
     public List<Weather> weather { get; set; }
     public string @base { get; set; }
     public Main main { get; set; }
-    public Main celcius
-    {
-      get
-      {
-        return new Main
-        {
-          temp = (main.temp - 32) * 5 / 9,
-          feels_like = (main.feels_like - 32) * 5 / 9,
-          temp_min = (main.temp_min - 32) * 5 / 9,
-          temp_max = (main.temp_max - 32) * 5 / 9,
-          pressure = main.pressure,
-          humidity = main.humidity
-        };
-      }
-    }
+    public Main celcius { get; set; }
     public int visibility { get; set; }
     public Wind wind { get; set; }
     public Clouds clouds { get; set; }

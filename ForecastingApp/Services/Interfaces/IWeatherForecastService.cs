@@ -9,5 +9,6 @@ namespace ForecastingApp.Services.Interfaces
   public interface IWeatherForecastService
   {
     Task<WeatherForecast> GetWeather(string City);
+    double FahrenheitToCelcius(double f);
   }
 }
